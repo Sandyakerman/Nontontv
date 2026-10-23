@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SandyAckerman - Control Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen pb-10">
 
@@ -26,7 +26,7 @@
         <section class="grid grid-cols-2 gap-3">
             <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
                 <p class="text-xs text-slate-400">Total Modul</p>
-                <p class="text-xl font-bold text-white mt-1">1 Core System</p>
+                <p class="text-xl font-bold text-white mt-1">2 Active Modules</p>
             </div>
             <div class="bg-slate-800 p-3 rounded-xl border border-slate-700">
                 <p class="text-xs text-slate-400">Server Hosting</p>
@@ -34,18 +34,20 @@
             </div>
         </section>
 
-        <!-- Pemicu Otomasi -->
+        <!-- Kontrol Otomasi -->
         <section class="bg-slate-800 p-4 rounded-xl border border-slate-700 space-y-3">
             <h2 class="text-sm font-semibold text-slate-200 flex items-center gap-2">
                 <i class="fa-solid fa-bolt text-amber-400"></i> Kontrol Otomasi
             </h2>
             
             <div class="space-y-2 pt-1">
-                <button onclick="runModule('FB Auto-Uploader')" class="w-full bg-blue-600 hover:bg-blue-700 active:scale-95 transition text-white py-2.5 px-4 rounded-lg text-sm font-medium flex items-center justify-between">
-                    <span><i class="fa-brands fa-facebook mr-2"></i> Trigger FB Uploader</span>
+                <!-- Tombol Twitter / X -->
+                <button onclick="runModule('Twitter Auto-Post')" class="w-full bg-sky-500 hover:bg-sky-600 active:scale-95 transition text-white py-2.5 px-4 rounded-lg text-sm font-medium flex items-center justify-between">
+                    <span><i class="fa-brands fa-x-twitter mr-2"></i> Trigger Tweet Otomatis</span>
                     <i class="fa-solid fa-play text-xs"></i>
                 </button>
 
+                <!-- Tombol Google Indexer -->
                 <button onclick="runModule('Google Indexer')" class="w-full bg-slate-700 hover:bg-slate-600 active:scale-95 transition text-white py-2.5 px-4 rounded-lg text-sm font-medium flex items-center justify-between">
                     <span><i class="fa-solid fa-magnifying-glass mr-2"></i> Run Search Indexer</span>
                     <i class="fa-solid fa-play text-xs"></i>
@@ -62,8 +64,8 @@
             <div class="space-y-2">
                 <a href="#" class="block p-3 bg-slate-900/50 hover:bg-slate-900 rounded-lg border border-slate-700/50 flex justify-between items-center">
                     <div>
-                        <p class="text-sm font-medium text-slate-200">Movievy Media Hub</p>
-                        <p class="text-xs text-slate-500">Redirect & Traffic Engine</p>
+                        <p class="text-sm font-medium text-slate-200">Nontontv / Movievy Hub</p>
+                        <p class="text-xs text-slate-500">Redirect & Media Traffic Engine</p>
                     </div>
                     <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400"></i>
                 </a>
@@ -71,7 +73,7 @@
                 <a href="#" class="block p-3 bg-slate-900/50 hover:bg-slate-900 rounded-lg border border-slate-700/50 flex justify-between items-center">
                     <div>
                         <p class="text-sm font-medium text-slate-200">Menu QR Dinamis</p>
-                        <p class="text-xs text-slate-500">Katalog UMKM / B2B</p>
+                        <p class="text-xs text-slate-500">Katalog UMKM / B2B System</p>
                     </div>
                     <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400"></i>
                 </a>
@@ -80,7 +82,7 @@
 
         <!-- Log Output -->
         <section class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-xs text-slate-400">
-            <p id="log-output" class="text-emerald-400">> System Ready. Menunggu perintah...</p>
+            <p id="log-output" class="text-emerald-400">> System Ready. Twitter Bot Module Connected.</p>
         </section>
 
     </main>
@@ -91,7 +93,7 @@
             log.innerText = `> Mengirim sinyal perintah ke [${name}]...`;
             setTimeout(() => {
                 log.innerText = `> Sinyal [${name}] berhasil dikirim!`;
-            }, 1000);
+            }, 1200);
         }
     </script>
 </body>
